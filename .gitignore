@@ -3,6 +3,6 @@
 # earlier versions of Drupal are tracked in `community/PHP/`
 
 # Ignore drupal core (if not versioning drupal sources)
-/vendor
+
 /.editorconfig
 /.gitattributes
