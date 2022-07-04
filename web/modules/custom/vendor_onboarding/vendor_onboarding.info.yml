@@ -1,0 +1,6 @@
+name: Vendor Onboarding Via email
+type: module
+description: 'Vendor Onboarding Via email.'
+package: Custom
+version: 1.0
+core_version_requirement: ^8 || ^9
