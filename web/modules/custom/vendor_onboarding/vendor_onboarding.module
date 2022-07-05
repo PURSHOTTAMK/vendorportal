@@ -1,1 +1,25 @@
 <?php
+use Drupal\Core\Entity\Query\QueryFactory;
+/*public function getBUCode(){
+	 $bundle = 'business_unit';
+	$query = \Drupal::entityQuery('vendor_management');
+	//$query->condition('status', 1);
+	$query->condition('type', $bundle);
+	//$query->condition('field_name.value', 'default', '=');
+	$entity_ids = $query->execute();
+	//$nodes = \Drupal\node\Entity\Node::loadMultiple(array $entity_ids = NULL);
+	  $wrapper = \Drupal::entityTypeManager()->getStorage('vendor_management')->loadMultiple($entity_ids);
+	//$entity_data = $wrapper->value();
+	//$final_data = get_object_vars($entity_data);
+	//kint($wrapper);
+	//$node = reset($wrapper);
+
+	//print_r($node->field_business_unit_code());
+	foreach ($wrapper as $key => $value) {	
+		$nodes=$value->toArray();
+		
+		$buCode[]= $nodes['field_business_unit_code'][0]['value'];	
+		
+	}
+	 return $buCode;
+ }*/

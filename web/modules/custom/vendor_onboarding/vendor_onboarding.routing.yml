@@ -1,7 +1,8 @@
 vendor_onboarding.singlesignon:
   path: '/vendor/registor'
   defaults:
-    _controller: '\Drupal\vendor_onboarding\Controller\VendorOnboardingController::register_vendor_via_email'
-    _title: 'Vendor Onboarding Via email'
+  ###  _controller: '\Drupal\vendor_onboarding\Controller\VendorOnboardingController::register_vendor_via_email'
+    _title: 'Vendor Registration Form'
+    _form: '\Drupal\vendor_onboarding\Form\VendorRegistration'
   requirements: 
     _permission: 'access content'

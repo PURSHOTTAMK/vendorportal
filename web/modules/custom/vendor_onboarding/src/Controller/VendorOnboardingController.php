@@ -1,16 +1,18 @@
 <?php
 namespace Drupal\vendor_onboarding\Controller;
+
+
 class VendorOnboardingController {
   public function register_vendor_via_email() {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $user = \Drupal\user\Entity\User::create();
+    //$user = \Drupal\user\Entity\User::create();
   
   // Required.
-    $user->setPassword('admin@123');
+    /*$user->setPassword('admin@123');
     $user->enforceIsNew();
     $user->setEmail('puru@gmail.com');
     $user->setUsername('puru');
-  
+  */
   // not required.
     // $user->set('init', 'email');
     // $user->set('langcode', $language);
@@ -23,10 +25,19 @@ class VendorOnboardingController {
   //  $user->activate();
   
     // Save user account.
-    $user->save();
+    //$user->save();
 
     //Send notification
-    _user_mail_notify('register_no_approval_required', $user);
+    //_user_mail_notify('register_no_approval_required', $user);
+	
+ 
+/* $storage = \Drupal::entityTypeManager()->getStorage('vendor_management');
+$ids = \Drupal::entityQuery('vendor_management')->execute();
+$apiList = $storage->loadMultiple($ids);
+//print_r($apiList);
+foreach ($apiList as $key => $value) {
+	
+}*/
     \Drupal::messenger()->addMessage(t('A welcome message with further instructions has been emailed to the new user '.$username), 'status');
 
 
