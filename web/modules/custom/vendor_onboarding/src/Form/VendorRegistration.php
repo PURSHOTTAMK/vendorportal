@@ -123,7 +123,7 @@ class VendorRegistration extends FormBase {
     // status blocked
     // $user->block();
     // status active
-  //  $user->activate();
+    $user->activate();
   
     // Save user account.
     $user->save();
